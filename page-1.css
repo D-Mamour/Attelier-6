@@ -255,7 +255,13 @@ footer ul li a {
 
 /* ================= RESPONSIVE ================= */
 @media (max-width: 900px) {
-  .grid {
+  .navbar ul {
+    display: none;
+  }
+  .btn-primary{
+    display: none;
+  }
+  .grid,.footer-container {
     grid-template-columns: 1fr;
   }
 

@@ -64,6 +64,7 @@ header {
 
 .navbar ul {
   display: flex;
+  float: right;
   gap: 28px;
   list-style: none;
   font-weight: 500;
@@ -114,7 +115,6 @@ a.btn-primary-1{
     right: 50px;
     position: absolute;
     top: 170px;
-    /* margin-top: 100px; */
     border-radius: 20px;
 }
 
@@ -341,10 +341,9 @@ footer ul li a {
   color: #94a3b8;
 }
 
-/* =========================
-   RESPONSIVE
-========================= */
-@media (max-width: 900px) {
+   /* RESPONSIVE */
+
+/* @media (max-width: 900px) {
   .hero-container {
     grid-template-columns: 1fr;
   }
@@ -355,17 +354,35 @@ footer ul li a {
   .footer-container {
     grid-template-columns: 1fr 1fr;
   }
-}
+} */
 
-@media (max-width: 600px) {
-  .stats-container,
+@media (max-width: 768px) {
+  .hero-container,
   .services-grid,
   .testimonials-grid,
   .footer-container {
     grid-template-columns: 1fr;
   }
 
+ 
+  .navbar ul {
+    display: none;
+  }
+  .btn-primary,.btn-primary-1{
+   display: none;
+  }
+
   .hero h1 {
     font-size: 30px;
+  }
+
+  .hero img {
+    position: static;
+    width: 100%;
+    height: auto;
+    margin-top: 20px;
+  }
+  .stats-container {
+    grid-template-columns: 1fr 1fr;
   }
 }

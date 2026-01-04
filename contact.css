@@ -1,3 +1,4 @@
+/* GLOBAL STYLES */
 * {
   margin: 0;
   padding: 0;
@@ -102,20 +103,14 @@ a.btn-primary-1 {
 
 /* HERO */
 .hero {
-  background: linear-gradient(
-      -90deg,
-      rgba(0, 0, 0, 0.8),
-      rgba(194, 119, 78, 0.3)
-    ),
-    url("images/banner-caterers.jpg") center/cover no-repeat;
-  color: white;
-  padding: 135px 24px;
+  color: var(--primary);
+  padding: 55px 10px;
   text-align: center;
 }
-/* ================= FORM SECTION ================= */
-.form-section {
-  padding: 60px 20px 80px;
+.hero p{
+    color: black;
 }
+/* FORM SECTION */
 
 .traiteur-form {
   max-width: 900px;
@@ -129,18 +124,8 @@ a.btn-primary-1 {
 .traiteur-form h3 {
   font-size: 16px;
   font-weight: 600;
-  color: #111827;
+  color: black;
   margin: 35px 0 20px;
-}
-
-.traiteur-form h3:first-child {
-  margin-top: 0;
-}
-
-.traiteur-form h4 {
-  font-size: 14px;
-  font-weight: 500;
-  margin: 25px 0 15px;
 }
 
 /* GRID INPUTS */
@@ -148,6 +133,15 @@ a.btn-primary-1 {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 20px 25px;
+}
+.form-grid :nth-child(3){
+    grid-column: span 2;
+}
+.form-grid :last-child{
+    grid-column: span 2;
+}
+.form-grid :nth-child(4){
+    grid-column: span 2;
 }
 
 /* INPUT GROUP */
@@ -158,8 +152,11 @@ a.btn-primary-1 {
 
 .form-group label {
   font-size: 13px;
-  color: #4b5563;
+  color: black;
   margin-bottom: 6px;
+}
+.menu{
+    display: none;
 }
 
 /* INPUTS */
@@ -186,31 +183,10 @@ textarea:focus {
 textarea {
   resize: vertical;
 }
-
-/* ================= CHECKBOX ================= */
-.checkbox-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 12px 30px;
-  margin-top: 10px;
-}
-
-.checkbox-grid label {
-  font-size: 14px;
-  color: #374151;
-}
-
-/* ================= FILE INPUT ================= */
-.form-group small {
-  margin-top: 6px;
-  font-size: 12px;
-  color: #6b7280;
-}
-
-/* ================= SUBMIT ================= */
+/* SUBMIT */
 .submit-area {
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
   margin-top: 35px;
 }
 
@@ -219,17 +195,56 @@ textarea {
   color: white;
   border: none;
   padding: 11px 26px;
-  border-radius: 999px;
+  border-radius: 4px;
   font-size: 14px;
-  font-weight: 500;
-  cursor: pointer;
+  width: 100%;
 }
 
-.submit-area button:hover {
+
+   /* TESTIMONIALS */
+
+.testimonials {
+  padding: 80px 24px;
+  background-color: white;
+}
+
+.testimonials-grid {
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.testimonial {
+  background: var(--background);
+  padding: 24px;
+  border-radius: 6px;
+  text-align: center;
+  justify-items: center;
+}
+.testimonial strong{
+    color: var(--primary);
+}
+
+.testimonial .avatar {
+  width: 45px;
+  height: 45px;
+  border-radius:50%;
   background: var(--primary);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  margin-bottom: 10px;
 }
 
-  /* FOOTER */
+.testimonial .avatar {
+    color: white;
+}
+
+   /* FOOTER */
 
 footer {
   background: #0f172a;
@@ -242,7 +257,7 @@ footer {
   margin: auto;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 14px;
+  gap: 24px;
 }
 
 footer h4 {
@@ -255,10 +270,9 @@ footer ul {
 }
 
 footer ul li a {
-  padding: 0;
   margin-bottom: 8px;
   font-size: 14px;
-  
+  padding: 0;
 }
 
 .footer-bottom {
@@ -268,17 +282,32 @@ footer ul li a {
   color: #94a3b8;
 }
 
- @media (max-width: 600px) {
-  .form-grid,
-  .checkbox-grid,
+@media (max-width: 600px) {
+  .form-grid, .testimonials-grid,
   .footer-container {
     grid-template-columns: 1fr;
   }
+.form-grid :nth-child(3){
+    grid-column: span none;
 }
 
+.form-grid :nth-child(4){
+    grid-column: span none;
+}
+
+.form-grid :last-child{
+    grid-column: span none;
+}   
 .navbar ul {
   display: none;
 }
 .btn-primary {
   display: none;
 }
+.menu{
+    display: flex;
+    font-size: 24px;
+    cursor: pointer;
+}
+}
+

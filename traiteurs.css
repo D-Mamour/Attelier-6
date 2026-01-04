@@ -291,3 +291,46 @@ footer ul li a {
   font-size: 13px;
   color: #94a3b8;
 }
+
+@media (max-width: 768px) {
+  .navbar ul {
+    display: none;
+  }
+  .btn-primary {
+    display: none;
+  }
+
+  .filter{
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    
+  }
+
+  .traiteur-card {
+    flex-direction: column;
+    align-items: start;
+  }
+  .traiteur-verifie{
+    width: 100%;
+  }
+  .traiteur-action {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    /* margin-top: 20px; */
+    width: 100%;
+    /* padding-right: 0; */
+    /* text-align: center; */
+    padding: 20px;
+  }
+  .btn-small {
+    margin-top: 0;
+  } 
+  .traiteur-action a {
+    margin-top: 10px;
+  }
+  .footer-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
